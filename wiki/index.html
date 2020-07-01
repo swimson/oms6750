@@ -277,6 +277,8 @@ Error message and password prompt
 
 <li>3.6.14 - Quantitative Data and Emperical Tests</li>
 
+<li>3.6.15 - Special Statistical Tests</li>
+
 <li>3.6.2 - Three types of evaluation</li>
 
 <li>3.6.3 - Evaluation Terminology</li>
@@ -10017,7 +10019,7 @@ Error message and password prompt
 <div title="$:/status/RequireReloadDueToPluginChange">
 <pre>no</pre>
 </div>
-<div created="20200630222701555" list="[[Week 8]]" modified="20200701014016059" title="$:/StoryList">
+<div created="20200630222701555" list="[[3.6.15 - Special Statistical Tests]] [[Week 8]]" modified="20200701015100792" title="$:/StoryList">
 <pre></pre>
 </div>
 <div plugin-type="info" title="$:/temp/info-plugin" type="application/json">
@@ -10603,7 +10605,7 @@ Generally accept alternative hypothesis if there is less than a 5% chance the di
 
 </pre>
 </div>
-<div created="20200701013313121" modified="20200701014951383" section="03.06.14" tags="lecture week8" title="3.6.14 - Quantitative Data and Emperical Tests">
+<div created="20200701013313121" modified="20200701015114268" section="03.06.14" tags="lecture week8" title="3.6.14 - Quantitative Data and Emperical Tests">
 <pre>Quantitative Data: Nominal, Ordinal, Interval, Ratio
 
 When to use each test:
@@ -10627,12 +10629,43 @@ When to use each test:
 |Alt Hypothesis|Distributions are unequal|
 
 !! Interval and Ratio (no zero point) Data (zero point)
-|Recommended|Student's t-test|
+|Recommended|Student's t-test (when data normal)|
 |Alternatives|MWW test, Kruskal-Wallis test|
 |Independent Variable|Category|
 |Dependent Variable|Average of outcomes|
 |Null Hypothesis|Outcomes are equal|
 |Alt Hypothesis|Outcomes are unequal|</pre>
+</div>
+<div created="20200701015118950" modified="20200701020539585" section="3.6.15" tags="lecture week8" title="3.6.15 - Special Statistical Tests">
+<pre>Restrictions:
+
+* Only comparing two levels (ex: two interfaces, two class types)
+
+If you do pair-wise comparisons (called repeated testing) it raises the likelihood of a Type I error.
+
+def: ''Type 1 Error'' (False Positive) - False rejection of the null hypothesis.
+
+def: ''Type II Error'' (False Negative) - false retention of the null hypothesis.
+
+!! Ordinal or Nominal (3+ Treatments)
+|Recommended|Chi-squared test|
+|Alternatives|Fisher's exact test, G-test|
+|Independent Variable|Category|
+|Dependent Variable|Distribution among categories|
+|Null Hypothesis|All distributions are equal|
+|Alt Hypothesis|Any one distribution is unequal|
+
+--&gt; Chi-Squared test doesn't tell us which treatment is different, just that at least one of them is unequal.... then we can do pairwise testing.
+
+!! Interval or Ratio (3+ Treatments)
+|Recommended|Analysis of Variance (ANOVA)|
+|Alternatives|Kruskal-Wallis Test, Median Test|
+|Independent Variable|Category|
+|Dependent Variable|Average of outcomes|
+|Null Hypothesis|All outcomes are equal|
+|Alt Hypothesis|Any one outcome is unequal|
+
+</pre>
 </div>
 <div created="20200630230900559" modified="20200630231437956" section="03.06.02" tags="lecture week8" title="3.6.2 - Three types of evaluation">
 <pre>!! Types of Evaluation
